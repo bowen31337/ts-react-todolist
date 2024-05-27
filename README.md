@@ -1,31 +1,83 @@
-# React + TypeScript + Vite
+# Todo List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple Todo List application built with React and TypeScript. The app allows users to add, edit, and delete todo items, with support for multiple edits and improved accessibility features.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Add Todo**: Users can add new todo items by entering text and pressing the "Add Todo" button or the Enter key.
+- **Edit Todo**: Users can edit existing todo items. When editing, the input field is focused, and users can save changes by pressing the "Save" button or the Enter key.
+- **Cancel Edit**: Users can cancel the edit operation by pressing the "Cancel" button or the Escape key, reverting the todo item to its original state.
+- **Delete Todo**: Users can delete todo items by pressing the "Delete" button.
+- **Keyboard Navigation**: The application supports keyboard navigation, allowing users to tab through interactive elements and use Enter and Escape keys for actions.
+- **Accessibility**: Improved accessibility with ARIA labels, roles, and screen reader support.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A statically typed superset of JavaScript that enhances code quality and maintainability.
+- **CSS**: Styling the components with modern CSS techniques.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/todo-list-app.git
+    ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# ts-react-todolist
+2. Navigate to the project directory:
+    ```bash
+    cd todo-list-app
+    ```
+
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Start the development server:
+    ```bash
+    npm start
+    ```
+
+## Usage
+
+1. **Add a Todo Item**:
+    - Type your todo text in the input field.
+    - Press the "Add Todo" button or the Enter key to add the item to the list.
+
+2. **Edit a Todo Item**:
+    - Click the "Edit" button next to a todo item.
+    - Modify the text in the input field.
+    - Press the "Save" button or the Enter key to save changes.
+    - Press the "Cancel" button or the Escape key to discard changes.
+
+3. **Delete a Todo Item**:
+    - Press the "Delete" button next to a todo item to remove it from the list.
+
+## Accessibility Features
+
+- **ARIA Labels and Roles**: Added `aria-label` attributes to buttons and input fields to provide descriptive labels for screen readers. Added `role="listitem"` to each `li` element.
+- **Keyboard Navigation**: Ensured all interactive elements are focusable and have a visible focus state.
+- **Screen Reader Support**: Added visually hidden labels (using `.sr-only` class) to provide meaningful content for screen readers.
+
+## CSS Enhancements
+
+- **Flexbox Layout**: Used flexbox to align elements properly.
+- **Focus Styles**: Added styles to highlight focused elements for better accessibility.
+- **Modern Design**: Improved overall look and feel with modern CSS techniques, including shadows, colors, and spacing.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request with your improvements.
+
+## Acknowledgements
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+
+Feel free to customize and enhance this README file as needed.
